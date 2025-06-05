@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: tube-flix-backend
+    env: node
+    buildCommand: "npm install"
+    startCommand: "npm start"
+    plan: free
+    envVars:
+      - key: MONGO_URI
+        value: mongodb+srv://tube-flix:<SUA_SENHA>@cluster.mongodb.net/tubeflix
+      - key: JWT_SECRET
+        value: chaveultrasecreta
